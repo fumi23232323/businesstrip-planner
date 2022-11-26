@@ -15,7 +15,7 @@
 
         <div class="field">
           <%= f.label :department_category_id, "所属" %>
-          <%= f.text_field :department_category_id, id:"department" %>
+          <%= f.collection_select(:department_category_id, DepartmentCategory.all, :id, :name, {}, {class:"department"})  %>
         </div>
 
         <div class="field">
