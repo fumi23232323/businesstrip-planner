@@ -3,7 +3,7 @@
 ＃＃usersテーブル
 |Column                 |Type    |Options                |
 |-----------------------|--------|-----------------------|
-｜personnel number      ｜integer ｜null:false            ｜
+｜personnel_number      ｜integer ｜null:false            ｜
 ｜department_category_id｜integer ｜null:false            ｜
 ｜position_category_id  ｜integer ｜null:false            ｜
 ｜last_name             ｜string  ｜null:false            ｜
