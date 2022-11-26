@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
   # 新規登録時、ストロングパラメーターを許可
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up,
-      keys: [:email, :encrypted_password, :personnel_number, :department_category_id, :position_category_id, :last_name,:first_name,])
+      keys: [:personnel_number, :department_category_id, :position_category_id, :last_name, :first_name,])
     
   end
 end

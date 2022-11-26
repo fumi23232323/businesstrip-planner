@@ -7,9 +7,19 @@ class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :department_category
   belongs_to :position_category
-  #空の投稿を保存できないようにする
-  validates :email, :encrypted_password, :personnel_number, :department_category_id, :position_category_id, :last_name,:first_name, presence: true
 
-  #部署の選択が「---」の時は保存できないようにする
-  validates :department_category_id, numericality: { other_than: 1, message: "can't be blank" } 
+  with_options presence: true do
+
+  #空の投稿を保存できないようにする
+  validates:personnel_number, format: { with: /\A\d{9}\z/ }
+  validates:department_category_id, numericality: { other_than: 1, message: "can't be blank" } #所属「の選択が「---」の時は保存できないようにする
+  validates:position_category_id, numericality: { other_than: 1, message: "can't be blank" } #役職「の選択が「---」の時は保存できないようにする
+  validates:last_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }
+  validates:first_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }
+
+  end
+
+   # 半角英数字混合
+   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze  
+   validates_format_of :password, with: PASSWORD_REGEX, message: 'Include both letters and numbers in half-width characters'
 end
