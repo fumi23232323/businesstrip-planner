@@ -10,7 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< Updated upstream
 ActiveRecord::Schema.define(version: 2022_11_24_131506) do
+=======
+ActiveRecord::Schema.define(version: 2022_11_26_153509) do
+
+  create_table "trips", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "item_name", null: false
+    t.string "first_day", null: false
+    t.integer "last_day", null: false
+    t.integer "member_1_id"
+    t.integer "member_2_id"
+    t.string "member_3_id"
+    t.string "member_4_id"
+    t.string "member_5_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+>>>>>>> Stashed changes
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -18,8 +35,7 @@ ActiveRecord::Schema.define(version: 2022_11_24_131506) do
     t.integer "personnel_number", null: false
     t.integer "department_category_id", null: false
     t.integer "position_category_id", null: false
-    t.string "last_name", null: false
-    t.string "first_name", null: false
+    t.string "name", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
