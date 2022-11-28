@@ -1,5 +1,7 @@
 class Trip < ApplicationRecord
   belongs_to :user
+  has_many :trip_users
+  has_many :users, through: :trip_users
 
   with_options presence: true do
     validates:item_name

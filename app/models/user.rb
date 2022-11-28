@@ -17,6 +17,9 @@ class User < ApplicationRecord
   validates:last_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }
   validates:first_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }
 
+  has_many :trip_users
+  has_many :trips, through: :trip_users
+
   end
 
    # 半角英数字混合
