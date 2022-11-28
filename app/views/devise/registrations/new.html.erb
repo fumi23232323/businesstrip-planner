@@ -22,15 +22,10 @@
         </div>
         <div class="name_field">
         <div class="field">
-          <%= f.label :last_name, "姓" %>
-          <%= f.text_field :last_name, id:"last_name", autocomplete: "last_name" %>
+          <%= f.label :name, "名前" %>
+          <%= f.text_field :name, id:"name", autocomplete: "name" %>
         </div>
 
-        <div class="field">
-          <%= f.label :first_name, "名" %>
-          <%= f.text_field :first_name, id:"first_name", autocomplete: "first_name" %>
-        </div>
-        </div>
         <div class="field">
           <%= f.label :email, "メールアドレス" %>
           <%= f.email_field :email, id:"user_email", autofocus: true, autocomplete: "email" %>
