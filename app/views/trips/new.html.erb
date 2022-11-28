@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 <div class="main">
   <div class="inner">
     <div class="form__wrapper">
@@ -7,49 +6,3 @@
     </div>
   </div>
 </div>
-=======
-<div class='chat-room-form'>
-  <h1>新規出張作成フォーム</h1>
-  <%=form_with model: @trip, local: true do |f|%>
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--left'>
-        <%= f.label :item_name, :出張タイトル, class: 'chat-room-form__label'%>
-      </div>
-      <div class='chat-room-form__field--right'>
-        <%= f.text_field :item_name, class: 'chat__room_name chat-room-form__input', placeholder: '20字以内で入力してください'%>
-      </div>
-
-       <div class='chat-room-form__field--left'>
-        <%= f.label :first_day, :初日, class: 'chat-room-form__label'%>
-      </div>
-      <div class='chat-room-form__field--right'>
-        <%= f.text_field :first_day, class: 'chat__room_name chat-room-form__input', placeholder: '20字以内で入力してください'%>
-      </div>
-
-       <div class='chat-room-form__field--left'>
-        <%= f.label :last_day, :最終日, class: 'chat-room-form__label'%>
-      </div>
-      <div class='chat-room-form__field--right'>
-        <%= f.text_field :last_day, class: 'chat__room_name chat-room-form__input', placeholder: '20字以内で入力してください'%>
-      </div>
-
-
-    </div>
-    <div class='chat-room-form__field'>
-    </div>
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--left'>
-        <label class='chat-room-form__label' for='chat_room_メンバー1'>メンバー1</label>
-      </div>
-      <div class='chat-room-form__field--right'>
-      </div>
-    </div>
-    <div class='chat-room-form__field'>
-      <div class='chat-room-form__field--left'></div>
-      <div class='chat-room-form__field--right'>
-        <%= f.submit class: 'chat-room-form__action-btn'%>
-      </div>
-    </div>
-  <% end %>
-</div>
->>>>>>> Stashed changes
