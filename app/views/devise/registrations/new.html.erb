@@ -20,7 +20,7 @@
           <%= f.label :position_category_id , "役職" %>
            <%= f.collection_select(:position_category_id, PositionCategory.all, :id, :name, {}, {class:"position"})  %>
         </div>
-        <div class="name_field">
+       
         <div class="field">
           <%= f.label :name, "名前" %>
           <%= f.text_field :name, id:"name", autocomplete: "name" %>

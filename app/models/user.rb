@@ -16,9 +16,7 @@ class User < ApplicationRecord
   validates:personnel_number, format: { with: /\A\d{9}\z/ }
   validates:department_category_id, numericality: { other_than: 1, message: "can't be blank" } #所属「の選択が「---」の時は保存できないようにする
   validates:position_category_id, numericality: { other_than: 1, message: "can't be blank" } #役職「の選択が「---」の時は保存できないようにする
-  validates:last_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }
-  validates:first_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }
-
+  validates:name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }
 
 
   end
