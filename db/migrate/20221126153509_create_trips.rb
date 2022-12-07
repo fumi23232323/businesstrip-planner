@@ -3,8 +3,8 @@ class CreateTrips < ActiveRecord::Migration[6.0]
     create_table :trips do |t|
 
    t.string  :item_name,     null: false
-   t.string  :first_day,     null: false
-   t.integer :last_day,      null: false
+   t.date  :first_day,     null: false
+   t.date  :last_day,      null: false
    t.timestamps
     end
   end

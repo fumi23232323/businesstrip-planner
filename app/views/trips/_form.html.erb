@@ -1,25 +1,60 @@
-<%= form_with model: モデル名, local: true do |f|%>
+<%= form_with model: @trip, local: true do |f|%>
   <div class="field">
-    <%= f.label :hoge, "プロトタイプの名称" %><br />
-    <%= f.text_field :hoge, id:"prototype_title" %>
+    <%= f.label :item_name, "出張タイトル" %><br />
+    <%= f.text_field :item_name, id:"prototype_title" %>
   </div>
 
-  <div class="field">
-    <%= f.label :hoge, "キャッチコピー" %><br />
-    <%= f.text_area :hoge, class: :form__text, id:"prototype_catch_copy" %>
-  </div>
+<div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">出張初日</label>
+    </div>
+    <div class='input-birth-wrap'>
+      <%= raw sprintf(
+                  f.date_select(
+                    :first_day,
+                    class:'select-birth',
+                    id:"birth-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 2022,
+                    end_year: (Time.now.year + 5),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+    </div>
+<div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">出張最終日</label>
+    </div>
+    <div class='input-birth-wrap'>
+      <%= raw sprintf(
+                  f.date_select(
+                    :last_day,
+                    class:'select-birth',
+                    id:"birth-date",
+                    use_month_numbers: true,
+                    prompt:'--',
+                    start_year: 2022,
+                    end_year: (Time.now.year + 5),
+                    date_separator: '%s'),
+                  "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :hoge, "コンセプト" %><br />
-    <%= f.text_area :hoge, class: :form__text, id:"prototype_concept" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :hoge, "プロトタイプの画像" %><br />
-    <%= f.file_field :hoge, id:"prototype_image" %>
-  </div>
+<div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <label class='chat-room-form__label' for='chat_room_出張メンバー'>出張メンバー</label>
+      </div>
+      <div class='chat-room-form__field--right'>
+      <select name="trip[user_ids][]">
+          <option value="">出張するユーザーを選択してください</option>
+          <% User.where.not(id: current_user.id).each do |user| %>
+            <option value=<%= user.id %>><%= user.name %></option>
+          <% end %>
+       </select>
+        <input name="trip[user_ids][]" type="hidden" value=<%= current_user.id %>>
+      </div>
+    </div>
 
   <div class="actions">
-    <%= f.submit "保存する", class: :form__btn  %>
+    <%= f.submit "作成する", class: :form__btn  %>
   </div>
 <% end %>
