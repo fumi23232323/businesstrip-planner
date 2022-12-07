@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 2022_11_28_120838) do
 
   create_table "trips", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "item_name", null: false
-    t.string "first_day", null: false
-    t.integer "last_day", null: false
+    t.date "first_day", null: false
+    t.date "last_day", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
