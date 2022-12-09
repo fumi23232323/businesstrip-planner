@@ -22,6 +22,7 @@
             <div class="nav__right"> 
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :nav__logout %>
               <%= link_to "新規出張作成", new_trip_path, class: :nav__btn %>
+              <%= link_to "マイページ", "/users/#{current_user.id}", class: :nav__btn %>
             </div> 
           <%# // ログインしているときは上記を表示 %>
           <%# ログインしていないときは以下を表示 %>
