@@ -1,0 +1,14 @@
+<div class="card">
+ <%#= link_to image_tag(prototype.image, class: :card__img), prototype_path(prototype.id) %>
+   <% @trips.each do |trip| %>
+  <div class="card__body">
+   <%= link_to trip.item_name, trip_path(trip.id), class: :card__title %>
+    <p class="card__summary">
+      <%= trip.first_day %>
+      <%="~"%>
+      <%= trip.last_day %>
+    </p>
+     <% end %>
+   <%#= link_to "by #{trip.user.name}", "/users/#{trip.user.id}", class: :card__user %>
+   
+  </div>
