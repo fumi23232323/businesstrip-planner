@@ -3,5 +3,4 @@ Rails.application.routes.draw do
   root to: "trips#index"
   resources :trips
   resources :users, only: :show
-  
 end

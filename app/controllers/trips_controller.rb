@@ -1,6 +1,6 @@
 class TripsController < ApplicationController
   def index
-  @ptrip = Trip.all
+  @ptrip = Trip.includes(:user)
   end
 
   def new
@@ -16,6 +16,11 @@ class TripsController < ApplicationController
       render :new 
     end
   end
+
+  def show
+    @trip = Trip.new
+    @trip = Trip.find(params[:id])
+    end
   
 
 
