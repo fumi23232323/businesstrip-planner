@@ -37,6 +37,7 @@ a {
 /* ヘッダー */
 
 .header {
+
   background-color: #260bbd;
   margin-bottom: 48px;
   padding: 20px 0;
@@ -59,6 +60,7 @@ a {
   padding: 0.4em 1.6em;
   font-size: 0.8em;
   color: #dae3e7;
+  color: #87CEFA;
   text-decoration: none;
   user-select: none;
   border: 1px #87CEFA solid;
@@ -93,10 +95,11 @@ a {
 
 .field{
   margin: 10px 0;
-}
+  margin: 8px 0;
 
 .actions{
   margin-bottom: 40px;
+  margin-top: 20px;
 }
 
 .form__btn{
@@ -321,3 +324,4 @@ a {
     width: 100%;
   }
 }
+  }
