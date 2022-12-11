@@ -1,5 +1,6 @@
 <main class="main">
   <div class="inner">
+
    <div class="prototype__wrapper">
 <div class="card">
   <div class="card__body">
@@ -10,6 +11,14 @@
       <%= @trip.last_day %>
     </p>
    <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
+
+    <div class="prototype__wrapper">
+      <p class="prototype__hedding">
+        <%= "プロトタイプのタイトル"%>
+      </p>
+      <%= link_to @trip.item_name, trip_path(trip.id), class: :prototype__user %>
+      <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
+
         <div class="prototype__manage">
           <%= link_to "編集する", root_path, class: :prototype__btn %>
           <%= link_to "削除する", root_path, class: :prototype__btn %>
