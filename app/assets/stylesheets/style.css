@@ -24,6 +24,19 @@ li {
   list-style: none;
 }
 
+h1{
+  color:#260bbd
+}
+
+h2{
+  color:#260bbd
+}
+
+span style{
+  color:red
+}
+
+
 img {
   max-width: 100%;
   vertical-align: bottom;
@@ -34,9 +47,13 @@ a {
   color: #3b4043;
 }
 
+hills-image {
+
+}
 /* ヘッダー */
 
 .header {
+  
 
   background-color: #260bbd;
   margin-bottom: 48px;
@@ -84,6 +101,18 @@ a {
   opacity: 0.5;
 }
 
+/* フッター */
+
+.footer {
+  background-color: #260bbd;
+  padding: 10px 0;
+}
+.copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+}
+
 /* フォーム周り */
 .form__wrapper{
   min-height: calc(100vh - 161px);
@@ -122,6 +151,8 @@ a {
 }
 
 /* メイン */
+
+
 
 .greeting{
   margin-bottom: 20px;
@@ -269,17 +300,8 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-/* フッター */
 
-.footer {
-  background-color: #999;
-  padding: 10px 0;
-}
-.copyright {
-  text-align: center;
-  color: #fff;
-  font-size: 10px;
-}
+
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
@@ -323,5 +345,6 @@ a {
   .table{
     width: 100%;
   }
+
 }
   }
