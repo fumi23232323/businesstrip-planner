@@ -1,6 +1,6 @@
 class TripsController < ApplicationController
   def index
-  @ptrip = Trip.includes(:user)
+  @trip = Trip.includes(:user)
   end
 
   def new
@@ -17,10 +17,12 @@ class TripsController < ApplicationController
     end
   end
 
+
   def show
     @trip = Trip.new
     @trip = Trip.find(params[:id])
     end
+
   
 
 
