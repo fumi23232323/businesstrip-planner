@@ -1,0 +1,58 @@
+// Place all the styles related to the schedules controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+input[type=radio]+label:before{
+  content: "";
+  display: inline-block;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+input[type=radio][value="airplane"]+label:before{
+  background-image: url("airplane.png");
+}
+
+  input[type=radio][value="shinkansen"]+label:before{
+    background-image: url("shinkansen.png");
+}
+
+input[type=radio][value="train"]+label:before{
+  background-image: url("train.png");
+}
+
+input[type=radio][value="taxi"]+label:before{
+  background-image: url("taxi.png");
+}
+
+input[type=radio][value="goal"]+label:before{
+  background-image: url("goal.png");
+}
+
+input[type=radio][value="lunch"]+label:before{
+  background-image: url("lunch.png");
+}
+
+input[type=radio][value="business_dinner"]+label:before{
+  background-image: url("business_dinner.png");
+}
+
+input[type=radio][value="accommodation"]+label:before{
+  background-image: url("accommodation.png");
+}
+
+input[type=radio][value="gift"]+label:before{
+  background-image: url("gift.png");
+}
+
+input[type=radio][value="contract"]+label:before{
+  background-image: url("contract.png");
+}
+
+input[type=radio][value="presentation"]+label:before{
+  background-image: url("presentation.png");
+}
+
+input[type=radio][value="meeting"]+label:before{
+  background-image: url("meeting.png");
+}

@@ -1,28 +1,24 @@
 <main class="main">
   <div class="inner">
-<<<<<<< Updated upstream
     <%# ログインしているときは以下を表示する %>
+
     <% if user_signed_in? %> 
       <div class="greeting"> 
         <%= link_to current_user.name+"さんのマイページ", root_path, class: :greeting__link %>
-=======
 
-    <%# ログインしているときは以下を表示する %>
-       <div class="greeting"> 
+
+      <%# <div class="greeting"> %>
         <%= link_to current_user.name + "さんのマイページ", root_path, class: :greeting__link%>
->>>>>>> Stashed changes
-      </div> 
-    <% else %>
-    <% end %>
-    <%# // ログインしているときは上記を表示する %>
+   
 
+      </div> 
+    <%# // ログインしているときは上記を表示する %>
     <div class="card__wrapper">
       <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
-      <%= render partial: "trip", collection: @trips %>
+      <%= render partial: "trip" %>
     </div>
-<<<<<<< Updated upstream
+
   </div>
-=======
    </div>
->>>>>>> Stashed changes
 </main>
+

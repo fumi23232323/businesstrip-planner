@@ -1,17 +1,37 @@
-<main class="main">
-  <div class="inner">
-    <%# ログインしているときは以下を表示する %>
+
+<div class="main">
+ <div class="inner">
+ <div class="form__wrapper">
+      <%# ログインしているときは以下を表示する %>
     <% if user_signed_in? %> 
       <div class="greeting"> 
-        <%= link_to current_user.name+"さんは現在ログイン中です。トップページです。", "/users/#{current_user.id}", class: :greeting__link %>
+        <%= link_to current_user.name+"さんは現在ログイン中です。", "/users/#{current_user.id}", class: :greeting__link %>
       </div> 
     <% else %>
-    <% end %>
+    <% end %><br>
     <%# // ログインしているときは上記を表示する %>
+  <h1><font_color="blue">Business Trip Plannnerとは</font></h1>
+  <p>Business Tip Plannnerは、出張スケジュール管理アプリです。出張に関する情報をアプリにまとめて、出張メンバーと共有することができます。</p><br>
+  
+  <h2>Business Trip Plannnerでできること</h2>
+  <div class="how_to_list">
+  <ul class="lists">
+   <li>■出張スケジュールを作成することができます。</li>
+   <li>■出張メンバーに登録すると、出張スケジュールを共有できます。</li>
+   <li>■出張の準備や出張中に発生するタスク管理ができます。</li>
+   <li>■出張経費の管理ができます。</li>
+   </ul><br>
 
-    <div class="card__wrapper">
-      <%# 投稿機能実装後、部分テンプレートでプロトタイプ投稿一覧を表示する %>
-      <%= render partial: "trip", collection: @trips %>
+  <h2>Business Trip Plannnerの使い方</h2>
+   <ul>
+   <li type="sqare">■初めて使う方は、新規登録ボタンからユーザー登録をしてください。<b><span style="color:red"><%= link_to "⇨LINK", new_user_registration_path %></span></b></li>
+    <li type="sqare">■新規登録をするとマイページから出張の登録ができます。</li>
+   <li type="sqare">■出張を登録すると、スケジュールを作成できます。</li>
+   <li type="sqare">■作成したスケジュールは、出張メンバーのマイページから参照が出来るので、アプリ内でメンバーとメッセージのやり取りができます。</li>
+   <li type="sqare">■スケジュールの他に、to doリストや出張経費の管理もできます。</li>
+   </ul>
+  </div>
+</div>
     </div>
   </div>
-</main>
+</div>

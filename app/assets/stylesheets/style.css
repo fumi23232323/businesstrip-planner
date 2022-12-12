@@ -24,6 +24,19 @@ li {
   list-style: none;
 }
 
+h1{
+  color:#260bbd
+}
+
+h2{
+  color:#260bbd
+}
+
+span style{
+  color:red
+}
+
+
 img {
   max-width: 100%;
   vertical-align: bottom;
@@ -34,10 +47,15 @@ a {
   color: #3b4043;
 }
 
+hills-image {
+
+}
 /* ヘッダー */
 
 .header {
-  background-color: #f1f8fe;
+  
+
+  background-color: #260bbd;
   margin-bottom: 48px;
   padding: 20px 0;
 
@@ -58,6 +76,7 @@ a {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
+  color: #dae3e7;
   color: #87CEFA;
   text-decoration: none;
   user-select: none;
@@ -82,6 +101,18 @@ a {
   opacity: 0.5;
 }
 
+/* フッター */
+
+.footer {
+  background-color: #260bbd;
+  padding: 10px 0;
+}
+.copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+}
+
 /* フォーム周り */
 .form__wrapper{
   min-height: calc(100vh - 161px);
@@ -92,8 +123,8 @@ a {
 }
 
 .field{
+  margin: 10px 0;
   margin: 8px 0;
-}
 
 .actions{
   margin-bottom: 40px;
@@ -120,6 +151,8 @@ a {
 }
 
 /* メイン */
+
+
 
 .greeting{
   margin-bottom: 20px;
@@ -237,7 +270,6 @@ a {
 }
 
 /* ユーザーページ */
-
 .user__wrapper{
   min-height: calc(100vh - 161px);
 }
@@ -268,17 +300,8 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-/* フッター */
 
-.footer {
-  background-color: #999;
-  padding: 10px 0;
-}
-.copyright {
-  text-align: center;
-  color: #fff;
-  font-size: 10px;
-}
+
 
 /* タブレット対応 */
 @media (max-width: 1024px) {
@@ -322,3 +345,7 @@ a {
   .table{
     width: 100%;
   }
+
+}
+  }
+

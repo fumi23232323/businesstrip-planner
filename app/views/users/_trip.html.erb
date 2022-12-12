@@ -1,9 +1,8 @@
-<<<<<<< Updated upstream
 <div class="card">
    <% @trips.each do |trip| %>
   <div class="card__body">
    <%= link_to trip.item_name, trip_path(trip.id), class: :card__title %>
-=======
+
 
 
    <div class="card">
@@ -18,7 +17,6 @@
        <%="~"%>
        <%= trip.last_day %>
     </p>
->>>>>>> Stashed changes
     <p class="card__summary">
       <%= "出張メンバー：" %>
       <% trip.users.each do |user| %>
@@ -26,16 +24,15 @@
       <% end %><br><br>
       <% end %>
     </p>
-<<<<<<< Updated upstream
-     <% end %>
-   <%#= link_to "by #{trip.user.name}", "/users/#{trip.user.id}", class: :card__user %>
+
+
    
   </div>
-=======
+
     
      </div>
     </div>
 
 
 
->>>>>>> Stashed changes
+
