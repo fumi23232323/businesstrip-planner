@@ -1,6 +1,10 @@
 class TripsController < ApplicationController
   def index
+<<<<<<< Updated upstream
   @ptrip = Trip.all
+=======
+  @trip = Trip.includes(:user)
+>>>>>>> Stashed changes
   end
 
   def new
@@ -16,6 +20,15 @@ class TripsController < ApplicationController
       render :new 
     end
   end
+<<<<<<< Updated upstream
+=======
+
+  def show
+    @trip = Trip.find(params[:id])
+   
+
+    end
+>>>>>>> Stashed changes
   
 
 
