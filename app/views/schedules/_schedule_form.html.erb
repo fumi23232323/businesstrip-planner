@@ -1,0 +1,30 @@
+<%= form_with model: @schedule, local: true do |f|%>
+  <div class="field">
+<%= f.label :日にち %>
+<%= f.date_field :日にち %><br>
+<%= f.label :開始時間 %>
+<%= f.time_field :開始時間 %><br>
+<%= f.label :終了時間 %>
+<%= f.time_field :終了時間 %><br>
+<%= f.label :"スケジュール" %>
+<%= f.text_field :item_name, id:"prototype_title" %><br>
+<%= f.label :"場所" %>
+<%= f.text_field :place, id:"prototype_title" %><br>
+<%= f.label :"参考URL" %>
+<%= f.url_field :url, id:"参考URL" %> <br>
+<p>アイコンを選択してください</p>
+<input type="radio" name="sizeSelect" value="airplane" id="sizeSelectSmall" checked><label for="sizeSelectSmall"></label>
+<input type="radio" name="sizeSelect" value="shinkansen" id="sizeSelectMedium"><label for="sizeSelectMedium"></label>
+<input type="radio" name="sizeSelect" value="train" id="sizeSelectLarge"><label for="sizeSelectLarge"></label>
+<input type="radio" name="sizeSelect" value="taxi" id="sizeSelectLarge"><label for="sizeSelectLarge"></label>
+<input type="radio" name="sizeSelect" value="goal" id="sizeSelectLarge"><label for="sizeSelectLarge"></label><br>
+<input type="radio" name="sizeSelect" value="lunch" id="sizeSelectLarge"><label for="sizeSelectLarge"></label>
+<input type="radio" name="sizeSelect" value="business_dinner" id="sizeSelectLarge"><label for="sizeSelectLarge"></label>
+<input type="radio" name="sizeSelect" value="accommodation" id="sizeSelectLarge"><label for="sizeSelectLarge"></label>
+<input type="radio" name="sizeSelect" value="gift" id="sizeSelectLarge"><label for="sizeSelectLarge"></label><br>
+<input type="radio" name="sizeSelect" value="contract" id="sizeSelectLarge"><label for="sizeSelectLarge"></label>
+<input type="radio" name="sizeSelect" value="presentation" id="sizeSelectLarge"><label for="sizeSelectLarge"></label>
+<input type="radio" name="sizeSelect" value="meeting" id="sizeSelectLarge"><label for="sizeSelectLarge"></label>
+ </div>
+
+<% end %>

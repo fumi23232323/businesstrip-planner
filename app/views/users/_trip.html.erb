@@ -1,0 +1,38 @@
+<div class="card">
+   <% @trips.each do |trip| %>
+  <div class="card__body">
+   <%= link_to trip.item_name, trip_path(trip.id), class: :card__title %>
+
+
+
+   <div class="card">
+    <div class="enter_form">
+     <% @trips.each do |trip| %>
+      <div class="card__body">
+       <%= "出張名：" %>
+      <%= link_to trip.item_name, trip_path(trip.id), class: :card__title %>
+     <p class="card__summary">
+       <%= "出張期間：" %>
+       <%= trip.first_day %>
+       <%="~"%>
+       <%= trip.last_day %>
+    </p>
+    <p class="card__summary">
+      <%= "出張メンバー：" %>
+      <% trip.users.each do |user| %>
+      <%= user.name %>
+      <% end %><br><br>
+      <% end %>
+    </p>
+
+
+   
+  </div>
+
+    
+     </div>
+    </div>
+
+
+
+
