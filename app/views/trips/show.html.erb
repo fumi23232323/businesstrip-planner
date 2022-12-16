@@ -1,36 +1,36 @@
 <main class="main">
   <div class="inner">
-
-   <div class="prototype__wrapper">
-<div class="card">
-  <div class="card__body">
-   <%= @trip.item_name %>
-    <p class="card__summary">
-      <%= @trip.first_day %>
-      <%="~"%>
-      <%= @trip.last_day %>
-    </p>
-   <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
-
-    <div class="prototype__wrapper">
-      <p class="prototype__hedding">
-        <%= "プロトタイプのタイトル"%>
-      </p>
-      <%#= link_to @trip.item_name, trip_path(trip.id), class: :prototype__user %>
-      <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
-
+    <div class="form__wrapper">
+      <table>
+       <tbody>
+         <tr>
+            <th>出張タイトル</th>
+            <td><%= @trip.item_name %></td>
+         </tr>
+         <tr>
+            <th>出張初日</th>
+            <td><%= @trip.first_day %> </td>
+         </tr>
+         <tr>
+            <th>出張最終日</th>
+            <td><%= @trip.last_day %> </td>
+         </tr>
+         <tr>
+            <th>出張メンバー</th>
+            <td><%= @trip.users.name %></td>
+         </tr>
+        </tbody>
+      </table>
+ 
+     <div class="prototype__wrapper">
         <div class="prototype__manage">
-          <%= link_to "編集する", root_path, class: :prototype__btn %>
-          <%= link_to "削除する", root_path, class: :prototype__btn %>
-           <%= link_to "スケジュールを作成する", new_schedule_path, class: :prototype__btn %>
-       
-  </div>
+          <%= link_to "出張の編集", root_path, class: :trip__btn %>
+          <%= link_to "出張の削除", root_path, class: :trip__btn %><br><br>
         </div>
-      <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
-   <%#= link_to "by #{trip.user.name}", "/users/#{trip.user.id}", class: :card__user %>
-   
-  </div>
-</div>
- </div>
+     </div>
+        <div class="schedule__manage">
+           <%= link_to "+ スケジュールを作成する", new_schedule_path, class: :schedule__btn %>
+        </div>
+    </div>
   </div>
 </main>
