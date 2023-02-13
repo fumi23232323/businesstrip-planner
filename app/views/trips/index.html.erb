@@ -5,7 +5,7 @@
       <%# ログインしているときは以下を表示する %>
     <% if user_signed_in? %> 
       <div class="greeting"> 
-        <%= link_to current_user.name+"さんは現在ログイン中です。", "/users/#{current_user.id}", class: :greeting__link %>
+        <%= link_to current_user.name+"さんは現在ログイン中です。(マイページへ)", "/users/#{current_user.id}", class: :greeting__link %>
       </div> 
     <% else %>
     <% end %><br>

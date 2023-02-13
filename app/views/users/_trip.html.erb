@@ -3,34 +3,39 @@
   <main class="main">
     <div class="inner">
       <div class="card">
-        <table class="teble">
+      <div class="prototype__manage">
+          <%= link_to "出張の編集", root_path, class: :trip__btn %>
+          <%= link_to "出張の削除", root_path, class: :trip__btn %><br>
+          <%= link_to "出張の新規作成", new_trip_path, class: :trip__btn %>
+        </div>
+        <table class="table">
        
           <thead>
             <tr>
-             <th class="header1">出張<p>タイトル</th>
-             <th class="header2">出張期間</th>
-             <th class="header3">出張メンバー1</th>
-              <th class="header3">出張メンバー2</th>
-               <th class="header3">出張メンバー3</th>
-                <th class="header3">出張メンバー4</th>
-                 <th class="header3">出張メンバー5</th>
-             <th class="header3">詳細</th>
+             <th class="header">出張<p>タイトル</th>
+             <th class="header">出張期間</th>
+             <th class="header">詳細</th>
+             <th class="header">出張メンバー1</th>
+             <th class="header">出張メンバー2</th>
+             <th class="header">出張メンバー3</th>
+             <th class="header">出張メンバー4</th>
+             <th class="header">出張メンバー5</th>
+             
             </tr>
           </thead>
           <tbody>
            <% @trips.each do |trip| %>
-           <% trip.users.each do |user| %>   
+           
             <tr>
-             <td><%= trip.item_name %></td>
-             <td><%=  trip.first_day %> 〜 <%= trip.last_day %></td>
+             <td><%= link_to trip.item_name , trip_path(trip.id)%></td>
+             <td><%= trip.first_day %> 〜 <%= trip.last_day %></td>
+            <td><%= link_to "詳細", trip_path(trip.id) %></td>
+              <% trip.users.each do |user| %>
              <td><%= user.name %></td>
-             <td><%= user.name %></td>
-             <td><%= user.name %></td>
-             <td><%= user.name %></td>
-             <td><s%= uer.name %></td>
-             <td><%= link_to "詳細", trip_path(trip.id) %></td>
+            <% end %>
+              
             </tr>
-           <% end %>
+           
            <% end %>
           </tbody> 
         </table>

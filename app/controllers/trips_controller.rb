@@ -9,6 +9,7 @@ class TripsController < ApplicationController
 
   def create
   @trip = Trip.new(trip_params)
+  
   if @trip.save
   
     redirect_to root_path
@@ -20,10 +21,20 @@ class TripsController < ApplicationController
 
   def show
     @trip = Trip.find(params[:id])
- 
     end
 
-  
+  def edit
+    @trip = Trip.find(params[:id])
+  end
+
+  def update
+   @trip = Trip.find(params[:id])
+   if @trip.update(trip_params)
+      redirect_to trip_path(@trip.id)
+    else
+      render :edit
+   end
+  end
 
 
 private

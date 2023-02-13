@@ -17,14 +17,17 @@
          </tr>
          <tr>
             <th>出張メンバー</th>
-            <td><%= @trip.users.name %></td>
+         
+            <% @trip.users.each do |user| %>
+             <td><%= user.name %></td>
+            <% end %>
          </tr>
         </tbody>
       </table>
  
      <div class="prototype__wrapper">
         <div class="prototype__manage">
-          <%= link_to "出張の編集", root_path, class: :trip__btn %>
+          <%= link_to "出張の編集", edit_trip_path(@trip.id), class: :trip__btn %>
           <%= link_to "出張の削除", root_path, class: :trip__btn %><br><br>
         </div>
      </div>
