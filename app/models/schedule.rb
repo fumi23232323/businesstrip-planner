@@ -1,7 +1,7 @@
 class Schedule < ApplicationRecord
   belongs_to :trip
   belongs_to :user
-  belongs_to :trip_user
+  belongs_to :trip_user, dependent: :destroy
   has_one_attached :image
 
   with_options presence: true do
